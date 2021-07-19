@@ -27,6 +27,7 @@ public class LinkedListBased<T> {
             throw new NoSuchElementException();
         var temp = head;
         head = head.next;
+        temp.next = null;
         size--;
         return temp.item;
     }
